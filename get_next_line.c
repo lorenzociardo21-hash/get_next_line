@@ -1,16 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 19:37:31 by lciardo           #+#    #+#             */
+/*   Updated: 2026/01/16 19:48:26 by lciardo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 11:18:13 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/16 19:52:48 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/16 18:55:04 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*ft_read_memory(int fd, char *memory)
 {
@@ -99,15 +111,15 @@ char	*ft_new_memory(char *memory)
 
 char	*get_next_line(int fd)
 {
-	static char	*memory[FD_MAX];
+	static char	*memory;
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= FD_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	memory[fd] = ft_read_memory(fd, memory[fd]);
-	if (!memory[fd])
+	memory = ft_read_memory(fd, memory);
+	if (!memory)
 		return (NULL);
-	line = ft_get_line(memory[fd]);
-	memory[fd] = ft_new_memory(memory[fd]);
+	line = ft_get_line(memory);
+	memory = ft_new_memory(memory);
 	return (line);
 }
