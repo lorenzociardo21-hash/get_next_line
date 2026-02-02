@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 19:39:41 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/16 19:49:00 by lciardo          ###   ########.fr       */
+/*   Created: 2026/02/02 11:04:32 by lciardo           #+#    #+#             */
+/*   Updated: 2026/02/02 12:08:51 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42

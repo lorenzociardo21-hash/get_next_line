@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 11:18:13 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/16 19:52:48 by lciardo          ###   ########.fr       */
+/*   Created: 2026/02/02 11:05:21 by lciardo           #+#    #+#             */
+/*   Updated: 2026/02/02 12:13:05 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,3 +111,17 @@ char	*get_next_line(int fd)
 	memory[fd] = ft_new_memory(memory[fd]);
 	return (line);
 }
+
+/* int	main(void)
+{
+	int		fd;
+	char	*line;
+
+	fd = open("test.txt", O_RDONLY);
+	while ((line = get_next_line(fd)))
+	{
+		printf("%s", line);
+		free(line);
+	}
+	return (0);
+} */

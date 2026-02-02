@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 11:24:34 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/16 18:51:34 by lciardo          ###   ########.fr       */
+/*   Created: 2026/02/02 11:05:14 by lciardo           #+#    #+#             */
+/*   Updated: 2026/02/02 12:09:01 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
